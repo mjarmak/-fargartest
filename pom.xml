@@ -35,6 +35,8 @@
 		</dependency>
 	</dependencies>
 
+<!-- This is automatically used to run the application in Intellij.
+You cannot runt the application using "java -jar <appName> without building it as a fat JAR using this plugin -->
 	<build>
 		<plugins>
 			<plugin>
