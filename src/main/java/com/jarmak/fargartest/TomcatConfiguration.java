@@ -24,6 +24,7 @@ public class TomcatConfiguration {
 
             @Override
             protected void postProcessContext(Context context) {
+                System.out.println("Tomcat config runs");
 
                 // context
                 ContextResource resource = new ContextResource();
