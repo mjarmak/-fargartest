@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ImportResource;
 
-@SpringBootApplication//(exclude={DataSourceAutoConfiguration.class})
-//@ImportResource("classpath:application-context.xml")
+@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+@ImportResource("classpath:application-context.xml")
 public class FargartestApplication {
 
 
