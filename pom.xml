@@ -18,6 +18,13 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>com.jarmak</groupId>
+			<artifactId>dbconn</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+		</dependency>
+
+<!--For entityManagerFactory in application-context.xml-->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
@@ -33,6 +40,19 @@
 			<version>RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+<!--For spring.datasource.driver-class-name-->
+		<dependency>
+			<groupId>com.oracle.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>19.3.0.0</version>
+		</dependency>
+
 	</dependencies>
 
 <!-- This is automatically used to run the application in Intellij.

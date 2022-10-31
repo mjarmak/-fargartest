@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<!-- the functionality of background processes workflow etc is moved to job scheduler component
+		these include CASPER DISC, CASPER Notification, CASPER RCS, CASPER Camunda Workflow
+	-->
+
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="openjpa" />
+		<property name="jpaPropertyMap">
+            <map>
+                <entry key="openjpa.jdbc.Schema" value="${casper.openjpa.jdbc.Schema}" />
+				<!-- START OF: OpenJPA Framework query debug parameters -->
+				<!-- <entry key="openjpa.Log" value="File=H:/ApplicationLogs/openjpa.log, DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE" /> -->
+				<!-- <entry key="openjpa.ConnectionFactoryProperties" value="PrintParameters=True" /> -->
+				<!-- END OF: OpenJPA Framework query debug parameters -->
+            </map>
+        </property>
+	</bean>
+</beans>
